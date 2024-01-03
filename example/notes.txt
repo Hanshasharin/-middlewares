@@ -1,0 +1,23 @@
+middleware :-
+
+A request handler with access to the application's request-response cycle is known as middleware. 
+It's a function that holds the request object, the response object, and the middleware function.they can perform various tasks like modifying the request and response object , ending the request cycle and calling the next middleware stackn in
+
+1.application level middleware-
+it runs for the all routes in an application. it is used for the tasks that need to perform globally. Application level miidleware usually focuses on authenticating users.
+
+2.outer level middleware -
+This middleware works in the same way of application level middleware , except it is bound to an instance of express.Router().  It is applied to specific router or a group of routers and used to perform tasks related to a specific part of application. Moreover you can load router-leval middleware with the help of router.use() function as well as router.METHOD() function
+
+3.Built-in middleware
+there are three built-in middleware
+statc: static serves static assets of application such as HTML files, images, and so on.
+JSON:parses incoming requests with JSON payloads
+Express.URL-encoded:parses incoming requests with URL-encoded payloads.
+
+4.error handling middleware
+Special middleware to handle errors that occur during the request-response cycle. It is defined with four parameters (err, req, res, next) and is triggered when an error occurs.
+
+5.third party middleware
+ Middleware developed by third-party developers or the community that can be easily integrated into Express.js applications to add specific functionalities.
+ 
